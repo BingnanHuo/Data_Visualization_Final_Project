@@ -14,9 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # https://rstudio.github.io/distill/website.html
 ```
 
-# Introduction
 
-asdasdas
 
 # Preparations
 
@@ -242,19 +240,6 @@ sample_df <- rbind(PA_sample,AL_sample)
 summary(sample_df)
 ```
 
-I will use mainly the price, year, mileage, state, and make variables.
-
-1.  year & mileage on price.
-
-2.  Price distribution by state
-
-3.  Mean price by year [scatter or line plot]
-
-4.  Mean price by state (map) [bubble, price=size of bubble]
-
-5.  Distribution (violin or box) of mean prices from each state, by year.
-
-Actually have
 
 1.  Map showing favorite make in each state
 
@@ -332,49 +317,7 @@ p4
 ggsave("price_by_year_&_mileage.png")
 ```
 
-    fig <- plot_ly(sample_df, x = ~Year, y = ~Mileage, text = ~Make, type = 'scatter', mode = 'markers', color = ~Price, colors='Reds' , marker = list(size = ~Price, opacity = 0.5))
-    fig <- fig %>% layout(title = 'Price by Year and Mileage, grouped by States',
-    xaxis = list(showgrid = FALSE),
-    yaxis = list(showgrid = FALSE))
-    fig
 
-    library(ggplot2)
-    library(ggradar)
-    suppressPackageStartupMessages(library(dplyr))
-    library(scales)
-
-    %>%
-    add_rownames( var = "group" ) %>%
-    mutate_each(funs(rescale), -group) %>%
-    tail(4) %>% select(1:10) -> mtcars_radar bv
-
-    ggradar(mtcars_radar) 
-
-```{r}
-mean_prices_all_states <- c()
-
-for (i in 1997:2017) {
-    print(i)
-    print(mean(used_cars$Price[used_cars$Year==i]))
-    mean_prices_all_states <- c(mean_prices_all_states, mean(used_cars$Price[used_cars$Year==i]))
-}
-
-mean_prices_by_year <- data.frame(list(Mean_Price=mean_prices_all_states,Year=1997:2017))
-
-
-
-mean_prices_all_states
-
-used_cars[,mean(Price), Year]
-
-ggplot(mean_prices_by_year, aes(x=Year, y=Mean_Price)) +
-    geom_point() +
-    geom_smooth() +
-    ggtitle("Mean Price by Year") +
-    xlab("Year") +
-    ylab("Price ($)")
-ggsave("mean_price_by_year.png")
-```
 
 ```{r}
 mean_prices_by_states <- c()
@@ -402,8 +345,8 @@ for (i in 1997:2017) {
     setnames(with_year, 'V1', 'years')
     all_data <- rbind(all_data, with_year)
 }
-all_data[1183,]
 ```
+
 
 ```{r}
 p10 <- ggplot(mean_prices_by_year_n_state, aes(x=years, y=mean_price, color=states)) +

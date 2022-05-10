@@ -2529,6 +2529,35 @@ it is natural to see more deaths; it doesn’t mean people are getting
 less and less healthy.</p>
 <p><br></p>
 <p><br></p>
+<p><img src="college.png" style="width:90.0%" /></p>
+<h4
+id="completion-rate-vs.-first-gen-by-black-undergrads-proportion">Completion
+Rate vs. First-Gen (By Black Undergrads Proportion)</h4>
+<p>I made this plot in Exam 1. The dataset that is used is the
+<strong>CollegeScores</strong> dataset in the <code>Lock5Data</code>
+package, on the details about “all US post-secondary schools collected
+by the Department of Education for the College Scorecard.” The variables
+I used for this plot is the proportion of first-gen college student and
+the completion rate (within 150% of normal time) for each college. The
+observations are also grouped by the percentage of black Undergrads at
+that college. This variable is a categorical was created previously by
+slicing the quantitative variable on the proportion of black undergrads
+at a college.</p>
+<p>We are noticing several things in this scatter plot. Firstly, if we
+ignore the groupings and the colors for a moment, we see that just the
+dots alone are showing a moderately strong, linear, and negative
+correlation between the variables. The higher first-gen proportions are,
+the lower the completion rates. However, we will notice another thing if
+we now also take into account of the groups. The regression line for
+high proportion black undergrads universities is lower than the other
+two lines, meaning that even if at the same level of first-gen rates,
+universities with more black undergrads would tend to have lower
+completion rates.</p>
+<p>Besides, we are seeing most of the universities with high proportion
+of black undergrads located toward the lower right part of the graph.
+This represents that most universities with high proportion of black
+undergrads also tend to have higher first-gen rates and lower completion
+rates.</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

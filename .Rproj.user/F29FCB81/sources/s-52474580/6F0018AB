@@ -3,7 +3,7 @@
     "path": "~/R_Projects/math230_final_project/course_visualizations.Rmd",
     "project_path": "course_visualizations.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "1607028275",
     "contents": "",
     "dirty": false,
     "created": 1651955456297.0,
@@ -12,20 +12,20 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "73,3",
+        "cursorPosition": "81,605",
         "scrollLine": "0",
         "rmdVisualMode": "true",
         "rmdVisualWrapConfigured": "true",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "4024:5086.5"
+        "rmdVisualModeLocation": "5356:6055"
     },
     "folds": "",
-    "lastKnownWriteTime": 1652188641,
+    "lastKnownWriteTime": 1652190324,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1652188641721,
+    "last_content_update": 1652190324357,
     "read_only": false,
     "read_only_alternatives": []
 }
