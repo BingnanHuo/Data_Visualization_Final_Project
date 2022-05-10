@@ -75,10 +75,38 @@ Now, the color for each state represents the most frequent make in the listings 
 
 Enough of looking at states. I always wondered if it is actually true that European cars are luxury and expensive, while Asian cars are cheap and economic. Let's look at the distributions of prices and the market shares of cars made by different country at different prices.
 
+While my initial dataset doesn't contain a column that tells me what country that make is from, that is not too hard to look up. So I then categorized all those makes by their originating country.
+
 ![](dist_price_country.png){width="90%"}
 
 ### Distribution of Prices by Country
 
-In this histogram, we are seeing that the majority of used car listings have prices below \$50000. It has a uni-modal distribution with right-skew. The mode appears to be at around \$17000. It was actually quite surprising seeing
+In this histogram, we are seeing that the majority of used car listings have prices below \$50000. It has a uni-modal distribution with right-skew. The mode appears to be at around \$17000. Note that I only zoomed into the portion where prices below \$100,000, since there are so few listings beyond that. It was actually quite surprising seeing that Japanese cars have such market share at this price range. But still, like what we have seen in the previous map plot, American makes are the most predominant ones. It also appears that Korean cars are quite rare, although also aimed at the cheaper, economical market.
 
-![](mean_price.png)
+<br>
+
+<br>
+
+If we focus on some specific market types (like exotic sport cars), maybe we get to see more rarer makes like Italian and British cars.
+
+![](mean_price.png){width="90%"}
+
+### Mean Price of Cars by Country
+
+Here, we focus on listings of cars manufactured by makes from these countries. I have put the mean price of make by each country in order so that we could see the trend easier. Italian and British cars are very rare and they have the highest mean prices. It also appears that German cars are aimed at more a more luxury market, somewhat above Swedish and American cars. And just like what we have confirmed previously, Japanese and Korean cars are the cheapest.
+
+<br>
+
+<br>
+
+To better show the market share of different make's country, I also categorized Price into 4 categories: Economy (Price below \$20,000), Intermediate (Price between \$20,000 and \$40,000), Premium (Price between \$40,000 and \$100,000), and Super Car (Price above \$100,000).
+
+![](price_range_proportion.png){width="90%"}
+
+### Proportion of Country in Each Price Range
+
+This is my favorite plot! We are seeing different make and country's market aim much better. While we saw almost zero Italian cars and little British cars in previous plots (because of their rarity), we see that they are very popular for super cars! German cars then made up about 40% of the rest of the super cars, with very little American and Japanese cars in super cars. The most interesting thing is seeing that Japanese and Korean cars decrease in proportion as price range gets higher. This just shows their market aim towards the economic side. American cars have pretty good market share in most price ranges except in super cars -- they are solid for sure. Exotic cars, like Italian, British, or German made, increases in proportion drastically for higher price ranges! And, one last notice: Swedish cars are just rare overall. They have little market share in all price ranges.
+
+<br>
+
+To give a quick summary of this data story. We have looked at several factors that are involved in the pricing of a used car. Its age and mileage are important for sure, but also exotic cars (like Italian or German made) usually have much higher price in general. In terms of market shares though, these exotic cars make up most of the super cars (Price\>\$100K), but these cars only made up a tiny portion of the entire market. Japanese and Korean cars, on the other hand, focuses on the cheaper side of the market, and we also see them having quite large market shares in those markets they aimed for. Lastly, American cars are the most solid cars in the market, being the predominant make in almost all states and in almost all market except for super cars. We have also looked up whether every state are a lot different in their preferences for cars' make or in price. But we notice that they are actually quite similar since they almost all like American cars. And their mean prices quite similar in general, with minor noticeable differences.

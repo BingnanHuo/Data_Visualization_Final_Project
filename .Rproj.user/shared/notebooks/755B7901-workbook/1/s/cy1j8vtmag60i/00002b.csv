@@ -5,7 +5,8 @@
                       direction = 1,
                       aesthetics = ""fill""
     ) +
-    ylab(""Proportion"")
+    ylab(""Proportion"") +
+    ggtitle(""Proportion of Country in Each Price Range"")
 ggsave(""price_range_proportion.png"")
 "
 "2","Saving 7.29 x 4.51 in image
