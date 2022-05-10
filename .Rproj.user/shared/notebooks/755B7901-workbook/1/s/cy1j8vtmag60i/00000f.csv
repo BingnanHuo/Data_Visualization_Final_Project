@@ -1,0 +1,2 @@
+"0","ggplot(used_cars[Price<=100000], aes(x=Price,fill=Country)) +"
+"0","    geom_histogram(bins = 20) "

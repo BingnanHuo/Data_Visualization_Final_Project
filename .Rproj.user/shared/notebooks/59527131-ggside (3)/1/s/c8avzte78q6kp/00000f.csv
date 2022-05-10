@@ -1,0 +1,5 @@
+"0","library(Lock5Data)"
+"0","library(ggside)"
+"0","library(ggplot2)"
+"0","data(SleepStudy)"
+"0","attach(SleepStudy)"

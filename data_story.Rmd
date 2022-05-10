@@ -1,7 +1,7 @@
 ---
-title: "Exporing Used Car Listings in US"
+title: "Exporing Used Car Listings in the United States"
 description: |
-  This is my data story where I explore the relationships between use a dataset containing more than 850k entries 
+  This is my data story where I explore the the relationships about used car listings in the United States with a dataset containing more than 850K entries.
 site: distill::distill_website
 ---
 
@@ -11,13 +11,26 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Introduction
 
-n overall title for your story and a complete written
-introduction to the data.
+I was able to find this very interesting dataset on Kaggle ([Source](https://www.kaggle.com/datasets/harikrishnareddyb/used-car-price-predictions)) on used car listings. It has over 850K entries and it's variables include: *Vin*, *Price*, *Year*, *Mileage*, *City*, *State*, *Make*, and *Model*! So one row of data would be one car listing with information on its *Vin*, *Price*, *Year*, *Mileage, Make, and Model* and the location (where the car is currently located for sale). After looking at the data though, it seems that *Vin*, *City*, and *Model* are too specific to create interesting visualizations, so I will mainly focus on the relationships between *Price*, *Year*, *Mileage*, *City*, *State*, and *Make* in this data story.
+
+The data in this dataset is recorded at some point in 2018, thus all of the car listings have manufactured year up to 2018. But also because of this fact, many states had very few listings for 2018 cars, I determined that there were not enough representative samples for every state. So I decided to ignore 2018 cars in this dataset as well.
+
+I have also included another page called Data Story Workbook on the top right corner of the website, where you can find all my code used to process the data and generate the graphs!
+
+# Data Story
+
+We begin with one common belief: usually newer cars are more expensive, so those manufactured in earlier years and has more mileage on them should sell for lower prices. We now check out this plot below to confirm that.
+
+![](price_by_year_&_mileage.png){width="90%"}
+
+#### Price by Year and Mileage, PA vs AL
+
+In this plot, I decided to look at the relationship between price and year and mileage in two states: PA and AL. I chose them because of the rumor that AL usually have higher used car prices, possibly because of its remote geographical location. For the convenience of visibility I took 300 random samples in each state's listings and plotted them in this scatter plot. The first thing one could notice is this roughly linear relationship between Year and Mileage -- as the used car gets older, it is also more likely that it had been driven for more miles. Each dot represents one observation, and the size of the dot represents the price of that car. We are seeing quite clearly that towards the lower right corner, we generally see larger dots because those cars are newer and have less mileages; while towards the upper left corner (where cars are older and driven for more mileages) the dots are generally smaller. The red color, which represents listings in AL, do not appear to show significantly larger dots than the blue dots (representing PA), except for maybe a few extreme observations. So I think the rumor is not quite true.
 
 <iframe src="map_fav_make.html" width="380" height="400">
 
 </iframe>
 
-<iframe src="map_fav_make.html" width="380" height="400">
+<iframe src="map_mean_price.html" width="380" height="400">
 
 </iframe>

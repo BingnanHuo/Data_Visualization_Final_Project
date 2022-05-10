@@ -39,8 +39,8 @@ library(RColorBrewer)
 The original dataset has 8 columns, but we won't need Vin, City, and Model because they are too specific. We will drop these three columns to save resources.
 
 ```{r}
-#used_cars <- fread(input = "true_car_listings.csv", drop = c("City", "Vin", "Model"))
-used_cars <- fread(input = "true_car_listings.csv")
+used_cars <- fread(input = "true_car_listings.csv", drop = c("City", "Vin", "Model"))
+#used_cars <- fread(input = "true_car_listings.csv")
 str(used_cars)
 ```
 
@@ -233,21 +233,9 @@ PA_cars <- used_cars[State=="PA"]
 PA_sample_index <- sample(nrow(PA_cars),300)
 PA_sample <- PA_cars[PA_sample_index]
 
-NY_cars <- used_cars[State=="NY"]
-NY_sample_index <- sample(nrow(NY_cars),300)
-NY_sample <- NY_cars[NY_sample_index]
-
-NJ_cars <- used_cars[State=="NJ"]
-NJ_sample_index <- sample(nrow(NJ_cars),300)
-NJ_sample <- NJ_cars[NJ_sample_index]
-
 AL_cars <- used_cars[State=="AL"]
 AL_sample_index <- sample(nrow(AL_cars),300)
 AL_sample <- AL_cars[AL_sample_index]
-
-#sample_df <- rbind(PA_sample,NY_sample) 
-#sample_df <- rbind(sample_df, NJ_sample)
-#sample_df <- rbind(sample_df, AL_sample)
 
 sample_df <- rbind(PA_sample,AL_sample)
 
@@ -278,7 +266,7 @@ Actually have
 
 5.  distribution of country for different price range (stacked proportional bar chart)
 
-6.  
+6.  histogram of price by country
 
 ###Some Testing
 
@@ -323,7 +311,8 @@ p1 <- ggplot(PA_sample, aes(x=Year, y=Mileage)) +
     geom_point(aes(size=Price)) +
     scale_fill_distiller(palette = "YlGnBu", direction = 1) +
     theme_light() +
-    labs(title = "Price",   y = "Mileage")
+    labs(title = "Price",   y = "Mileage") +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
 p1
 #ggplotly(p1)
@@ -337,7 +326,8 @@ p4 <- ggplot(sample_df, aes(x=Year, y=Mileage)) +
     #scale_fill_distiller(palette = "YlGnBu", direction = 1) +
     #theme_light() +
     labs(title = "Price ($)",   y = "Mileage (Mi)") +
-    ggtitle("Price by Year and Mileage, grouped by States")
+    ggtitle("Price by Year and Mileage, PA vs AL") +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 p4
 ggsave("price_by_year_&_mileage.png")
 ```
@@ -436,22 +426,10 @@ p11
 ggplotly(p11)
 ```
 
-```{r}
-for (i in levels(used_cars$State)) {
-    print(i)
-    print(nrow(used_cars[State==i & Year==1997]))
-}
-
-
-
-
-
-
-```
 
 make by state
 
-south -\> american
+south -> american
 
 ```{r}
 used_cars[,PriceRange := ifelse(Price>=100000, "Super Car", 
@@ -506,6 +484,3 @@ ggplot(country_summary, aes(x=PriceRange, y=N, fill=Country)) +
     
 ```
 
-```{r}
-used_cars[Country=="Italian"]
-```

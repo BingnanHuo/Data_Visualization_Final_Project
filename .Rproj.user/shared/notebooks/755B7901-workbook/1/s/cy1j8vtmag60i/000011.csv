@@ -1,0 +1,6 @@
+"0","    "
+"0","ggplot(used_cars[Price<=100000], aes(x=Price,y=Country,fill = stat(x))) +"
+"0","    geom_density_ridges_gradient(scale = 2, rel_min_height = 0.01)+"
+"0","    scale_fill_viridis_c(name = ""Temp. [F]"", option = ""C"") "
+"2","Picking joint bandwidth of 1670
+"

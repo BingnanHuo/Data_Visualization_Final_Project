@@ -1,0 +1,81 @@
+---
+title: "ggside"
+author: "Nick Huo, Gabby Mishler and Grace Miller"
+date: "2/21/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**load in ggside and attach dataset**
+
+```{r, message = FALSE, warning = FALSE}
+library(Lock5Data)
+library(ggside)
+library(ggplot2)
+data(SleepStudy)
+attach(SleepStudy)
+```
+
+**Introduction:** ggside is a package that allows us to add graphical information about one of the main panel’s axes on the side of them. This is particularly useful for metadata for discrete axis, or summary graphics on a continuous axis such as a boxplot or a density distribution. For example, in a scatter plot, we can show the distribution of the two variables individually on the sides of the scatter plot with ggside.
+
+
+**Graph 1:** The geom_xsidedensity adds a density plot to the top of the visualization that shares the same x values with the main plot. The geom_ysidedensity adds a density plot to the right side of the visualization.
+
+```{r message=FALSE, warning=FALSE}
+ggplot(SleepStudy, aes(x = PoorSleepQuality, y = StressScore, color = AlcoholUse)) +
+  geom_point(size = 2) +
+  geom_xsidedensity(aes(y = after_stat(density)), position = "stack") +
+  geom_ysidedensity(aes(x = after_stat(density)), position = "stack") +
+  xlab("Poor Sleep Quality") +
+  ylab("Stress Score") +
+  labs(color = "Alcohol Use") +
+  ggtitle("Poor Sleep Quality vs Stress Score and Alcohol Use - Density Plots") +
+  theme(axis.text.x = element_text(angle = -90), ggside.panel.scale = .3) 
+```
+
+**Graph 2:** Focusing on the last two lines of this chunk, you can see we used geom_xsideboxplot() to add a boxplot and scale_xsydey_discrete() to fix the scaling type of the axis.
+
+```{r message=FALSE, warning=FALSE}
+ggplot(SleepStudy, aes(PoorSleepQuality, StressScore, color = AlcoholUse)) +
+  geom_point(size = 2) +
+  xlab("Poor Sleep Quality") +
+  ylab("Stress Score") +
+  ggtitle("Poor Sleep Quality vs Stress Score and Alcohol Use - Density & Box") +
+  labs(color = "Alcohol Use") +
+  geom_ysidedensity(position = "stack") +
+  theme(axis.text.x = element_text(angle = -90), ggside.panel.scale = .3) +
+  geom_xsideboxplot(aes(y = AlcoholUse), orientation = "y") +
+  scale_xsidey_discrete() 
+ggsave("ggside.png")
+```
+
+**Graph 3:** From the boxplot code, the only differences made were that we changed geom_xsideboxplot() to geom_ysidebar(), and we can use the position = "fill" code to change the bar chart from a measure of count to a measure of density.
+
+```{r message=FALSE, warning=FALSE}
+ggplot(SleepStudy, aes(x = PoorSleepQuality, y = StressScore, color = AlcoholUse)) +
+  geom_point(size = 2) +
+  geom_xsideboxplot(aes(y = AlcoholUse), orientation = "y") +
+  scale_xsidey_discrete() +
+  geom_ysidebar(position = "fill") +
+  xlab("Poor Sleep Quality") +
+  ylab("Stress Score") +
+  ggtitle("Poor Sleep Quality vs Stress Score and Alcohol Use - Box & Bar") +
+  labs(color = "Alcohol Use") +
+  theme(axis.text.x = element_text(angle = -90), ggside.panel.scale = .3)
+```
+
+**Conclusion:** Beyond what we have presented, there are many other functions in ggside that we can add to expand on our graphs. Some examples include scatterplots, violin plots, histograms, line graphs, and more. There are many benefits to expanding the visualizations in ggside beyond simple scatterplots, because as we include more variables it can become messy. With this function, however, it allows for a more visually simple way to take in more information that can expand our knowledge of the datasets.
+
+**Links/Resources:**
+
+https://cran.r-project.org/web/packages/ggside/vignettes/ggside_basic_usage.html
+
+https://cran.r-project.org/web/packages/ggside/
+
+https://cran.r-project.org/web/packages/ggside/ggside.pdf
+
+https://github.com/jtlandis/ggside
+

@@ -1,0 +1,14 @@
+"0","ggplot(SleepStudy, aes(PoorSleepQuality, StressScore, color = AlcoholUse)) +
+  geom_point(size = 2) +
+  xlab(""Poor Sleep Quality"") +
+  ylab(""Stress Score"") +
+  ggtitle(""Poor Sleep Quality vs Stress Score and Alcohol Use - Density & Box"") +
+  labs(color = ""Alcohol Use"") +
+  geom_ysidedensity(position = ""stack"") +
+  theme(axis.text.x = element_text(angle = -90), ggside.panel.scale = .3) +
+  geom_xsideboxplot(aes(y = AlcoholUse), orientation = ""y"") +
+  scale_xsidey_discrete() 
+ggsave(""ggside.png"")
+"
+"2","Saving 7.29 x 4.51 in image
+"

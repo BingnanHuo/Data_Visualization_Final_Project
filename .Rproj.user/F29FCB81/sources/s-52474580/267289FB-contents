@@ -8,16 +8,14 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Hi! Welcome to my website for MATH230 Final Project.
+# Welcome
 
-```{r}
-print("Hello!!")
-```
+Hi! Welcome to my website for MATH230 Final Project. On the top right corner you will find links to my past visualizations created in MATH230 and two data story pages -- one for the story itself and another for all the code that built the visualizations used in my data story.
 
+My data story explores the relationships about used car listings in the United States. I found a dataset on used cars contained more than 850K entries and variables including: Vin, Price, Year, Mileage, City, State, Make, and Model. Hope you will like my visualizations!
 
-#TODO: checkout plotly (it can serve as a new plot we haven't done and it can add interactive things)
+# About me
 
+My name is 霍秉楠 Bingnan (Nick) Huo. I am from Beijing, China! I'm currently a junior majoring in Statistics at Bucknell University. In my free time, I love to skiing, mountain biking, and playing video games!
 
-
-
-
+Email: bh006\@bucknell.edu

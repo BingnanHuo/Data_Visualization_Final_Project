@@ -1,0 +1,5 @@
+"0","    "
+"0","ggplot(used_cars[Price>100000], aes(x=Price,fill=Country)) +"
+"0","    geom_histogram() "
+"2","`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+"
