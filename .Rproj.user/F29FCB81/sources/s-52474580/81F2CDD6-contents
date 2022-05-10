@@ -1,7 +1,7 @@
 ---
-title: "Final Project - Data Story"
+title: "My Data Story Workbook"
 description: |
-    Welcome to the website. I hope you enjoy it!
+    Here are all the code I used to generate the plots. It is a bit messy though, as it contains some code used for testing purposes as well!
 output:
   distill::distill_article:
     self_contained: false
@@ -414,7 +414,7 @@ p10 <- ggplot(mean_prices_by_year_n_state, aes(x=years, y=mean_price, color=stat
     ylab("Price ($)")
 ggplotly(p10)
 
-all_data
+
 p11 <- ggplot(all_data, aes(x=years, y=mean_price, color=State)) +
     geom_point() +
     #    geom_smooth() +
@@ -424,6 +424,8 @@ p11 <- ggplot(all_data, aes(x=years, y=mean_price, color=State)) +
 p11
 
 ggplotly(p11)
+saveWidget(ggplotly(p11), 'mean_price_by_year_and_state.html')
+
 ```
 
 

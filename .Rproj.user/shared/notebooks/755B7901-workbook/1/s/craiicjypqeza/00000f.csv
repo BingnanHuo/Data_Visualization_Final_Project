@@ -1,7 +1,0 @@
-"0","p10 <- ggplot(mean_prices_by_year_n_state, aes(x=years, y=mean_price, color=states)) +"
-"0","    geom_point() +"
-"0","    #    geom_smooth() +"
-"0","    ggtitle(""Mean Price by Year and State"") +"
-"0","    xlab(""Year"") +"
-"0","    ylab(""Price ($)"")"
-"0","ggplotly(p10)"

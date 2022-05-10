@@ -1,7 +1,0 @@
-"0","p11 <- ggplot(all_data, aes(x=years, y=mean_price, color=State)) +"
-"0","    geom_point() +"
-"0","    #    geom_smooth() +"
-"0","    ggtitle(""Mean Price by Year and State"") +"
-"0","    xlab(""Year"") +"
-"0","    ylab(""Price ($)"")"
-"0","p11"

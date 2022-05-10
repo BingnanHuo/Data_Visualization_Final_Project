@@ -17,20 +17,40 @@ The data in this dataset is recorded at some point in 2018, thus all of the car 
 
 I have also included another page called Data Story Workbook on the top right corner of the website, where you can find all my code used to process the data and generate the graphs!
 
+<br>
+
 # Data Story
 
 We begin with one common belief: usually newer cars are more expensive, so those manufactured in earlier years and has more mileage on them should sell for lower prices. We now check out this plot below to confirm that.
 
 ![](price_by_year_&_mileage.png){width="90%"}
 
-#### Price by Year and Mileage, PA vs AL
+### Price by Year and Mileage, PA vs AL
 
 In this plot, I decided to look at the relationship between price and year and mileage in two states: PA and AL. I chose them because of the rumor that AL usually have higher used car prices, possibly because of its remote geographical location. For the convenience of visibility I took 300 random samples in each state's listings and plotted them in this scatter plot. The first thing one could notice is this roughly linear relationship between Year and Mileage -- as the used car gets older, it is also more likely that it had been driven for more miles. Each dot represents one observation, and the size of the dot represents the price of that car. We are seeing quite clearly that towards the lower right corner, we generally see larger dots because those cars are newer and have less mileages; while towards the upper left corner (where cars are older and driven for more mileages) the dots are generally smaller. The red color, which represents listings in AL, do not appear to show significantly larger dots than the blue dots (representing PA), except for maybe a few extreme observations. So I think the rumor is not quite true.
 
-<iframe src="map_fav_make.html" width="380" height="400">
+<br>
+
+<br>
+
+<iframe src="mean_price_by_year_and_state.html" width="380" height="400">
 
 </iframe>
 
+### Mean Price by Year and State
+
+In this plot, we just look at the mean price of cars made in each year (1997 to 2017). But the focus is now on the different states. Although it might appear messy at first, this plot is in fact interactive, and you can double click on the legend to isolate any single state's data. We also can see the overall trend that newer cars are generally more expensive, but there is also an interesting thing happening -- some 1997 cars are more expensive then 2000 cars. I think this might be because of some of those really old cars has some antique or collection value. If you select only two or three states, you would also be able to compare the mean prices. Some states, like VT, has overall cheaper used car listing prices, so cars have a mean price lower than other states for cars made almost every year (1997 to 2017).
+
+<br>
+
+<br>
+
+While we are still at comparing the mean price of used cars for each state, maybe it will be easier to see them on a map. Could it be possible that some regions have more expensive cars because of some geographical region?
+
 <iframe src="map_mean_price.html" width="380" height="400">
+
+</iframe>
+
+<iframe src="map_fav_make.html" width="380" height="400">
 
 </iframe>

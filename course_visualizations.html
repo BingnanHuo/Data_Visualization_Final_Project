@@ -2036,6 +2036,339 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </script>
 
+  <style type="text/css">
+  /* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+
+
+
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.06rem;
+    --code-size:       14px;
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #000000;
+    --header-color:    rgba(0, 0, 0, 0.8);
+    --body-color:      rgba(0, 0, 0, 0.8);
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    sans-serif;
+    --mono-font:       monospace;
+    --body-font:       sans-serif;
+    --navbar-font:     sans-serif;  /* websites + blogs only */
+  }
+
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.6rem;
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       0.8rem;
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       0.8em;
+    --text-color:      rgba(0, 0, 0, 0.5);
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+
+  .distill-site-header {
+    --title-size:       18px;
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  .distill-site-footer {
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+  /*-- Additional custom styles --*/
+  /* Add any additional CSS rules below                      */
+  </style>
+  <style type="text/css">/* base variables */
+
+  /* Edit the CSS properties in this file to create a custom
+     Distill theme. Only edit values in the right column
+     for each row; values shown are the CSS defaults.
+     To return any property to the default,
+     you may set its value to: unset
+     All rows must end with a semi-colon.                      */
+
+  /* Optional: embed custom fonts here with `@import`          */
+  /* This must remain at the top of this file.                 */
+  @import url('https://fonts.googleapis.com/css2?family=Lato');
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Mono');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+  html {
+    /*-- Main font sizes --*/
+    --title-size:      50px;
+    --body-size:       1.0rem;                     /* edited */
+    --code-size:       0.9rem;                     /* edited */
+    --aside-size:      12px;
+    --fig-cap-size:    13px;
+    /*-- Main font colors --*/
+    --title-color:     #000000;
+    --heading-color:   rgba(0, 0, 0, 0.8);
+    --body-color:      #383838;                    /* edited */
+    --aside-color:     rgba(0, 0, 0, 0.6);
+    --fig-cap-color:   rgba(0, 0, 0, 0.6);
+    /*-- Specify custom fonts ~~~ must be imported above   --*/
+    --heading-font:    'Lato', sans-serif;         /* edited */
+    --mono-font:       'Fira Mono', monospace;     /* edited */
+    --body-font:       'Lato', sans-serif;         /* edited */
+    --navbar-font:     'Montserrat', sans-serif;   /* edited */
+  }
+
+  /*-- ARTICLE METADATA --*/
+  d-byline {
+    --heading-size:    0.6rem;
+    --heading-color:   rgba(0, 0, 0, 0.5);
+    --body-size:       0.8rem;
+    --body-color:      rgba(0, 0, 0, 0.8);
+  }
+
+  /*-- ARTICLE TABLE OF CONTENTS --*/
+  .d-contents {
+    --heading-size:    18px;
+    --contents-size:   13px;
+  }
+
+  /*-- ARTICLE APPENDIX --*/
+  d-appendix {
+    --heading-size:    15px;
+    --heading-color:   rgba(0, 0, 0, 0.65);
+    --text-size:       0.8em;
+    --text-color:      rgba(0, 0, 0, 0.5);
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  /* These properties only apply to Distill sites and blogs  */
+
+  .distill-site-header {
+    --title-size:       20px;                      /* edited */
+    --text-color:       #FFFFFF;                   /* edited */
+    --text-size:        20px;                      /* edited */
+    --hover-color:      #383838;                   /* edited */
+    --bkgd-color:       rgb(249, 83, 85);          /* edited */
+  }
+
+  .distill-site-footer {
+    --text-color:       rgba(255, 255, 255, 0.8);
+    --text-size:        15px;
+    --hover-color:      white;
+    --bkgd-color:       #0F2E3D;
+  }
+
+
+  /*-- Additional custom styles --*/
+
+  .posts-list .metadata .publishedDate {
+      color: rgb(249, 83, 85);
+  }
+
+  d-article p code {
+    color: #383838;
+    background: rgba(249, 83, 85, 0.1);
+    font-weight: 400;
+    font-size: 0.9em;
+  }
+
+  d-article a {
+      border-bottom: 2px solid rgba(249, 83, 85, 0.4);
+      text-decoration: none;
+  }
+
+  .distill-site-header .title {
+      font-weight: 600; 
+  }
+
+  ul > li::marker {
+    color: rgb(249, 83, 85);
+  }</style>
+  <style type="text/css">
+  /* base style */
+
+  /* FONT FAMILIES */
+
+  :root {
+    --heading-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono-default: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    --body-default: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body,
+  .posts-list .post-preview p,
+  .posts-list .description p {
+    font-family: var(--body-font), var(--body-default);
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .posts-list .post-preview h2,
+  .posts-list .description h2 {
+    font-family: var(--heading-font), var(--heading-default);
+  }
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: var(--mono-font), var(--mono-default);
+  }
+
+
+  /*-- TITLE --*/
+  d-title h1,
+  .posts-list > h1 {
+    color: var(--title-color, black);
+  }
+
+  d-title h1 {
+    font-size: var(--title-size, 50px);
+  }
+
+  /*-- HEADERS --*/
+  d-article h1,
+  d-article h2,
+  d-article h3,
+  d-article h4,
+  d-article h5,
+  d-article h6 {
+    color: var(--header-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- BODY --*/
+  d-article > p,  /* only text inside of <p> tags */
+  d-article > ul, /* lists */
+  d-article > ol {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+    font-size: var(--body-size, 1.06rem);
+  }
+
+
+  /*-- CODE --*/
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-size: var(--code-size, 14px);
+  }
+
+  /*-- ASIDE --*/
+  d-article aside {
+    font-size: var(--aside-size, 12px);
+    color: var(--aside-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- FIGURE CAPTIONS --*/
+  figure .caption,
+  figure figcaption,
+  .figure .caption {
+    font-size: var(--fig-cap-size, 13px);
+    color: var(--fig-cap-color, rgba(0, 0, 0, 0.6));
+  }
+
+  /*-- METADATA --*/
+  d-byline h3 {
+    font-size: var(--heading-size, 0.6rem);
+    color: var(--heading-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-byline {
+    font-size: var(--body-size, 0.8rem);
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  d-byline a,
+  d-article d-byline a {
+    color: var(--body-color, rgba(0, 0, 0, 0.8));
+  }
+
+  /*-- TABLE OF CONTENTS --*/
+  .d-contents nav h3 {
+    font-size: var(--heading-size, 18px);
+  }
+
+  .d-contents nav a {
+    font-size: var(--contents-size, 13px);
+  }
+
+  /*-- APPENDIX --*/
+  d-appendix h3 {
+    font-size: var(--heading-size, 15px);
+    color: var(--heading-color, rgba(0, 0, 0, 0.65));
+  }
+
+  d-appendix {
+    font-size: var(--text-size, 0.8em);
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  d-appendix d-footnote-list a.footnote-backlink {
+    color: var(--text-color, rgba(0, 0, 0, 0.5));
+  }
+
+  /*-- WEBSITE HEADER + FOOTER --*/
+  .distill-site-header .title {
+    font-size: var(--title-size, 18px);
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .distill-site-header a,
+  .nav-dropdown .nav-dropbtn {
+    font-family: var(--navbar-font), var(--heading-default);
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    font-size: var(--text-size, 15px);
+  }
+
+  .distill-site-header a:hover,
+  .nav-dropdown:hover .nav-dropbtn {
+    color: var(--hover-color, white);
+  }
+
+  .distill-site-header {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer {
+    font-size: var(--text-size, 15px);
+    color: var(--text-color, rgba(255, 255, 255, 0.8));
+    background-color: var(--bkgd-color, #0F2E3D);
+  }
+
+  .distill-site-footer a:hover {
+    color: var(--hover-color, white);
+  }</style>
   <!--/radix_placeholder_distill-->
   <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
@@ -2116,24 +2449,62 @@ alt="Generative Art - Outer Land" />
 <h2
 id="confidence-interval-plots-interactive-shiny-visualizations">Confidence
 Interval Plots &amp; Interactive Shiny Visualizations</h2>
-<p><img src="conf_int_project.png" /></p>
-<p>Here is a plot showing the effects of the confidence level on width
-of confidence intervals. We have randomly selected 6 from 10000 randomly
-simulated samples, and we will see that adjusting the confidence level
-higher will result in wider intervals, vice versa. In the top interval,
-with its sample mean, we can see that when confidence level is 80%, the
-reduced interval width caused it to almost miss the true population
-mean.</p>
-<p>So, with the same sample means, changing the confidence level will
-result in different interval widths; consequently, lower confidence
-levels means less intervals in repeated sampling will successfully
-capture the true population mean – the sample means remain the same, but
-different confidence level results in different widths that may or may
-not capture the true population mean.</p>
-<p><u>Link to Interactive APP:</u></p>
+<h4 id="link-to-interactive-app"><u>Link to Interactive APP</u></h4>
 <p><a
 href="https://rconnect.bucknell.edu/content/c9c7fa3a-0fbf-4c42-b4e7-19e6950f0564"
 class="uri">https://rconnect.bucknell.edu/content/c9c7fa3a-0fbf-4c42-b4e7-19e6950f0564</a></p>
+<h4 id="section"></h4>
+<p><img src="conf_int_project.png" /></p>
+<h4 id="confidence-interval-of-100-experiments">95% Confidence Interval
+of 100 Experiments</h4>
+<p>Here is a plot showing the effects of the confidence level on the
+proportion of intervals that would successfully capture the true mean
+and the width of confidence intervals. We have randomly generated 100
+samples with normal distribution, mean=0, SD=1, and sample size=50.
+Since our sample are randomly generated, we know what the true
+“population” mean is – here being 0 since all the samples were generated
+under <span class="math inline">\(\mathcal{N}(0,1)\)</span>. In these
+100 samples, all but 5 of them successful captured the true mean. In the
+interactive version of this plot, you could adjust the confidence level
+and notice that the intervals would become wider as confidence level
+increases, and vice versa. For a 95% confidence interval, we would
+expect only 95% samples, in repeated sampling, to be able to produce
+intervals that captures the true mean. And this is exactly what we are
+see here with our generated “samples” and intervals.</p>
+<h4 id="section-1"></h4>
+<p><img src="ggside.png" style="width:90.0%" /></p>
+<h4
+id="poor-sleep-quality-vs-stress-score-and-alcohol-use---density-box">Poor
+Sleep Quality vs Stress Score and Alcohol Use - Density &amp; Box</h4>
+<p>This is a plot Gabby, Grace, and I created for our ggplot extensions
+project. Our package was <code>ggside</code> , which allows us to see
+information (for example, the distribution) regarding a single axis in a
+bivariate plot like this scatter plot shown above. We used the
+<code>Lock5Data</code> datasets package and the <code>SleepStudy</code>
+dataset in it. This dataset contains observations about the sleep
+patterns of college students with a sample size of 253. In this plot, we
+used <em>PoorSleepQuality</em> and <em>StressScore</em> variables and
+scattered them, while also using <em>AlcoholUse</em> to group the
+observations. The top side is showing a boxplot of
+<em>PoorSleepQuality</em> in each <em>AlcoholUse</em> level; the right
+side is showing the density curves of <em>StressScore</em> grouped by
+<em>AlcoholUse</em> level. We are trying to see if stress scores might
+be correlated with poor sleep quality – so the more stressed a person
+is, the worse their sleep quality is; or the worse they sleep, the more
+stressed they are. We also also interesting to see if alcohol use was a
+factor in here, since we hypothesized that more alcohol use would lead
+to both higher stress score and worse sleep quality (meaning a higher
+“poor sleep quality”). The results, however, are not indicating a
+correlation between <em>PoorSleepQuality</em> vs <em>StressScore</em>
+for students in every alcohol consumption level. But, we still found
+something interesting thanks to the ggside extension. The boxplot on
+<em>PoorSleepQuality</em> indicates that students who don’t drink any
+alcohol (Abstain) has the lowest median <em>PoorSleepQuality</em>, while
+those who drink heavily has the highest median
+<em>PoorSleepQuality</em>. This means that those who don’t drink at all
+has the better sleep quality and drinking even “lightly” would result in
+worse sleep quality, while drinking heavily would really hurt their
+sleep quality.</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
@@ -2143,6 +2514,15 @@ class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"><
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->

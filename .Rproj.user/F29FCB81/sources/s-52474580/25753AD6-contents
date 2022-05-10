@@ -4,6 +4,7 @@ author: "霍秉楠 Nick Huo"
 description: |
   MATH230 Final Project
 output_dir: "."
+theme: theme.css #reference https://rstudio.github.io/distill/website.html?panelset1=theme.css&panelset2=screenshot2&panelset3=inspiration3#example-themes
 navbar:
   right:
     - text: "Homepage"
