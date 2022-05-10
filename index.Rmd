@@ -1,0 +1,18 @@
+---
+title: "MATH230 Final Project Website"
+description: |
+  by 霍秉楠 Nick Huo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Hi! Welcome to my website for MATH230 Final Project.
+
+```{r}
+print("Hello!!")
+```
+
+
+#TODO: checkout plotly (it can serve as a new plot we haven't done and it can add interactive things)

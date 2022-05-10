@@ -1,0 +1,8 @@
+"0","mean_prices_by_states <- c()"
+"0",""
+"0","states <- rep(unique(used_car_data$State), times=length(1997:2018))"
+"0","years <- rep(1997:2018, each=length(unique(used_car_data$State)))"
+"0","mean_price <- rep(0,length(years))"
+"0","mean_prices_by_year_n_state <- data.frame(states, years,mean_price)"
+"0","  "
+"0","mean_prices_by_year_n_state[2,]"

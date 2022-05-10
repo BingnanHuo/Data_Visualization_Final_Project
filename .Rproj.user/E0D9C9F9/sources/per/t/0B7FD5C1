@@ -1,0 +1,31 @@
+{
+    "id": "0B7FD5C1",
+    "path": "C:/Users/Nick/r_projects/math230_final_project/course_visualizations.Rmd",
+    "project_path": "course_visualizations.Rmd",
+    "type": "r_markdown",
+    "hash": "3311057472",
+    "contents": "",
+    "dirty": false,
+    "created": 1650045933305.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "33,0",
+        "scrollLine": "0",
+        "last_setup_crc32": "",
+        "rmdVisualMode": "false",
+        "rmdVisualModeLocation": "240:0",
+        "rmdVisualWrapConfigured": "true",
+        "docOutlineVisible": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1650652491,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1650652491031,
+    "read_only": false,
+    "read_only_alternatives": []
+}

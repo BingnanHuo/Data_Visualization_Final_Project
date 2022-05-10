@@ -1,0 +1,5 @@
+"0","PA_cars_sample <- PA_cars[sample_index]
+"
+"2","Error in `[.data.table`(PA_cars, sample_index) : 
+  sample_index is not found in calling scope and it is not a column name either. When the first argument inside DT[...] is a single symbol (e.g. DT[var]), data.table looks for var in calling scope.
+"

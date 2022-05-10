@@ -1,0 +1,15 @@
+"0","ggplot(sp500_alt, aes(sample=samp_quantile)) +
+  stat_qq() + 
+  stat_qq_line(color=2) +
+  ggtitle(""Normal Q-Q Plot"") +
+  xlab(""Theoretical Quantiles"") +
+  ylab(""Sample Quantiles"") +
+  coord_fixed()
+  #theme(aspect.ratio=1)
+  #theme_bw() +                       ## remove gray background
+  #theme(panel.grid=element_blank())  ## remove grid
+ggsave(""sp500_qq.png"")
+"
+"2","Saving 7.32 x 4.52 in image
+"
+"0",""

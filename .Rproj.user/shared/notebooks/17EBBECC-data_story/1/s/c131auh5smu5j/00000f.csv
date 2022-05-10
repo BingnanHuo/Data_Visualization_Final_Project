@@ -1,0 +1,5 @@
+"0","for (i in levels(used_car_data$State)) {"
+"0","  #print(i)"
+"0","  paste(""State: "", i)"
+"0","}"
+"0",""

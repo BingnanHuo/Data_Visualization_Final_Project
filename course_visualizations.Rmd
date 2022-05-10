@@ -1,0 +1,38 @@
+---
+title: "Past Course Visualizations"
+description: |
+  Some additional details about the website
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Generative Art
+
+The pictures below are artworks generated using the `aRtsy` [package](https://github.com/koenderks/aRtsy), which uses some algorithms with certain parameter and randomization settings to generate beautiful pieces autonomously.
+
+![Generative Art - Space Camo](Art1.png){width="80%"}
+
+*Space Camo, 2022*
+
+![Generative Art - Titan Waves](Art2.png){width="80%"}
+
+*Titan Wave, 2022*
+
+![Generative Art - Outer Land](Art3.png){width="80%"}
+
+*Outer Land, 2022*
+
+## Confidence Interval Plots & Interactive Shiny Visualizations
+
+![](conf_lvl_on_int_width.png){width="85%"}
+
+Here is a plot showing the effects of the confidence level on width of confidence intervals. We have randomly selected 6 from 10000 randomly simulated samples, and we will see that adjusting the confidence level higher will result in wider intervals, vice versa. In the top interval, with its sample mean, we can see that when confidence level is 80%, the reduced interval width caused it to almost miss the true population mean.
+
+So, with the same sample means, changing the confidence level will result in different interval widths; consequently, lower confidence levels means less intervals in repeated sampling will successfully capture the true population mean -- the sample means remain the same, but different confidence level results in different widths that may or may not capture the true population mean.
+
+[Link to Interactive APP:]{.ul}
+
+<https://rconnect.bucknell.edu/content/c9c7fa3a-0fbf-4c42-b4e7-19e6950f0564>

@@ -1,0 +1,63 @@
+---
+title: "Final Project - Data Story"
+description: |
+  Welcome to the website. I hope you enjoy it!
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+```
+
+
+
+##Testing
+
+
+###Importing Dataset
+```{r}
+library(data.table)
+used_car_data <- fread("true_car_listings.csv")
+str(used_car_data)
+length(used_car_data)
+```
+###Data Cleaning
+```{r}
+#used_car_data$Year <- factor(used_car_data$Year, ordered = T)
+summary(used_car_data$Year)
+
+used_car_data$State <- factor(used_car_data$State)
+summary(used_car_data$State)
+```
+I will use mainly the price, year, mileage, state, and make variables.
+1. year & mileage on price.
+
+###Some Testing
+```{r}
+for (i in levels(used_car_data$State)) {
+  #print(i)
+  paste("State: ", i)
+}
+
+```
+
+
+
+
+
+```{r}
+library(ggplot2)
+library(plotly)
+p <- ggplot(used_car_data, aes(x=Year, y=Mileage)) +
+  geom_tile(aes(fill = Price)) +
+  scale_fill_distiller(palette = "YlGnBu", direction = 1) +
+  theme_light() +
+  labs(title = "Price",   y = "spin rate (rpm)")
+
+ggplotly(p)
+```
+

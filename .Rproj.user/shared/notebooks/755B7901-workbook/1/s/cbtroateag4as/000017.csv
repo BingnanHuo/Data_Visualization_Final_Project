@@ -1,0 +1,5 @@
+"0","fig <- plot_ly(sample_df, x = ~Year, y = ~Mileage, text = ~Make, type = 'scatter', mode = 'markers', color = ~Price, colors='Reds' , marker = list(size = ~Price, opacity = 0.5))"
+"0","fig <- fig %>% layout(title = 'Price by Year and Mileage, grouped by States',"
+"0","         xaxis = list(showgrid = FALSE),"
+"0","         yaxis = list(showgrid = FALSE))"
+"0","fig"

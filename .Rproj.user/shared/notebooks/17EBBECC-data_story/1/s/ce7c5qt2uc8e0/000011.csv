@@ -1,0 +1,32 @@
+"0","library(ggplot2)"
+"0","library(plotly)"
+"2","Registered S3 method overwritten by 'htmlwidgets':
+  method           from         
+  print.htmlwidget tools:rstudio
+"
+"2","
+载入程辑包：‘plotly’
+
+"
+"2","The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+"
+"2","The following object is masked from ‘package:stats’:
+
+    filter
+
+"
+"2","The following object is masked from ‘package:graphics’:
+
+    layout
+
+"
+"0","p <- ggplot(used_car_data, aes(x=Year, y=Mileage)) +"
+"0","  geom_tile(aes(fill = Price)) +"
+"0","  scale_fill_distiller(palette = ""YlGnBu"", direction = 1) +"
+"0","  theme_light() +"
+"0","  labs(title = ""Price"",   y = ""spin rate (rpm)"")"
+"0",""
+"0","ggplotly(p)"

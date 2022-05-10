@@ -1,0 +1,37 @@
+"0","library(data.table)"
+"2","data.table 1.14.2 using 10 threads (see ?getDTthreads).  Latest news: r-datatable.com
+"
+"2","**********
+用中文运行data.table。软件包只提供英语支持。当在在线搜索帮助时，也要确保检查英语错误信息。这个可以通过查看软件包源文件中的po/R-zh_CN.po和po/zh_CN.po文件获得，这个文件可以并排找到母语和英语错误信息。
+**********
+"
+"2","
+载入程辑包：‘data.table’
+
+"
+"2","The following object is masked _by_ ‘.GlobalEnv’:
+
+    .N
+
+"
+"0","library(ggplot2)"
+"0","library(plotly)"
+"2","
+载入程辑包：‘plotly’
+
+"
+"2","The following object is masked from ‘package:ggplot2’:
+
+    last_plot
+
+"
+"2","The following object is masked from ‘package:stats’:
+
+    filter
+
+"
+"2","The following object is masked from ‘package:graphics’:
+
+    layout
+
+"
