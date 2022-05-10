@@ -17,13 +17,19 @@ The pictures below are artworks generated using the `aRtsy` [package](https://gi
 
 *Space Camo, 2022*
 
+<br>
+
 ![Generative Art - Titan Waves](Art2.png){width="80%"}
 
 *Titan Wave, 2022*
 
+<br>
+
 ![Generative Art - Outer Land](Art3.png){width="80%"}
 
 *Outer Land, 2022*
+
+<br>
 
 ## Confidence Interval Plots & Interactive Shiny Visualizations
 
@@ -39,10 +45,30 @@ The pictures below are artworks generated using the `aRtsy` [package](https://gi
 
 Here is a plot showing the effects of the confidence level on the proportion of intervals that would successfully capture the true mean and the width of confidence intervals. We have randomly generated 100 samples with normal distribution, mean=0, SD=1, and sample size=50. Since our sample are randomly generated, we know what the true "population" mean is -- here being 0 since all the samples were generated under $\mathcal{N}(0,1)$. In these 100 samples, all but 5 of them successful captured the true mean. In the interactive version of this plot, you could adjust the confidence level and notice that the intervals would become wider as confidence level increases, and vice versa. For a 95% confidence interval, we would expect only 95% samples, in repeated sampling, to be able to produce intervals that captures the true mean. And this is exactly what we are see here with our generated "samples" and intervals.
 
-#### 
+<br>
+
+<br>
+
+## Other Visualizations
+
+### ggplot extensions -- ggside
 
 ![](ggside.png){width="90%"}
 
 #### Poor Sleep Quality vs Stress Score and Alcohol Use - Density & Box
 
 This is a plot Gabby, Grace, and I created for our ggplot extensions project. Our package was `ggside` , which allows us to see information (for example, the distribution) regarding a single axis in a bivariate plot like this scatter plot shown above. We used the `Lock5Data` datasets package and the `SleepStudy` dataset in it. This dataset contains observations about the sleep patterns of college students with a sample size of 253. In this plot, we used *PoorSleepQuality* and *StressScore* variables and scattered them, while also using *AlcoholUse* to group the observations. The top side is showing a boxplot of *PoorSleepQuality* in each *AlcoholUse* level; the right side is showing the density curves of *StressScore* grouped by *AlcoholUse* level. We are trying to see if stress scores might be correlated with poor sleep quality -- so the more stressed a person is, the worse their sleep quality is; or the worse they sleep, the more stressed they are. We also also interesting to see if alcohol use was a factor in here, since we hypothesized that more alcohol use would lead to both higher stress score and worse sleep quality (meaning a higher "poor sleep quality"). The results, however, are not indicating a correlation between *PoorSleepQuality* vs *StressScore* for students in every alcohol consumption level. But, we still found something interesting thanks to the ggside extension. The boxplot on *PoorSleepQuality* indicates that students who don't drink any alcohol (Abstain) has the lowest median *PoorSleepQuality*, while those who drink heavily has the highest median *PoorSleepQuality*. This means that those who don't drink at all has the better sleep quality and drinking even "lightly" would result in worse sleep quality, while drinking heavily would really hurt their sleep quality.
+
+<br>
+
+<br>
+
+![](us_death.png){width="100%"}
+
+#### Leading Causes of Death in U.S. by Year
+
+This is a plot I recreated during Exam 2 using provided dataset on US cause of deaths. The variables involved are the time (year) and the number of death in that year, grouped by causes of deaths. We are noticing that total number of death in the US had a jump from 2019 to 2020 -- the increase is roughly 300,000 death and almost all of that can be attributed to COVID-19. We are also noticing that there are gradual but slight increases in total number of deaths for all causes in general over the years 2015 to 2019 (before COVID started). I think it might be because of the population growth the US had experiences decades ago. So it is natural to see more deaths; it doesn't mean people are getting less and less healthy.
+
+<br>
+
+<br>

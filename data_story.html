@@ -2497,8 +2497,105 @@ possible that some regions have more expensive cars because of some
 geographical region?</p>
 <iframe src="map_mean_price.html" width="380" height="400">
 </iframe>
+<h3 id="us-used-cars-mean-listing-price-by-state">2018 US Used Cars –
+Mean Listing Price by State</h3>
+<p>Here in this interactive map plot, you can hover on each state to see
+more detailed information on that state’s used car listings. Colors
+indicate mean prices. But just on the first glance, there doesn’t appear
+to be some geographical factor involved by a lot. States in the Midwest
+has slightly higher prices, but not by a large amount, compared to
+States on the East. The difference in color (signifying mean listing
+price) are also small.</p>
+<p><br></p>
+<p><br></p>
+<p>Now what if we want to see the preference in make for each state? I
+have also heard of rumors that people in the South prefer American cars
+more, is that true?</p>
 <iframe src="map_fav_make.html" width="380" height="400">
 </iframe>
+<h3 id="us-used-cars-favorite-make-by-state">2018 US Used Cars –
+Favorite Make by State</h3>
+<p>Now, the color for each state represents the most frequent make in
+the listings of that state. We can see that, contrary to the rumor, the
+majority of US states in fact love American cars like Ford and
+Chevrolet. While Japanese makes are only the most popular in a few
+states. And there is only one state (actually not a state) – Washington
+DC that has BMW as its favorite make. You have to zoom in a lot on the
+map to see the DC region and its brown color.</p>
+<p><br></p>
+<p><br></p>
+<p>Enough of looking at states. I always wondered if it is actually true
+that European cars are luxury and expensive, while Asian cars are cheap
+and economic. Let’s look at the distributions of prices and the market
+shares of cars made by different country at different prices.</p>
+<p>While my initial dataset doesn’t contain a column that tells me what
+country that make is from, that is not too hard to look up. So I then
+categorized all those makes by their originating country.</p>
+<p><img src="dist_price_country.png" style="width:90.0%" /></p>
+<h3 id="distribution-of-prices-by-country">Distribution of Prices by
+Country</h3>
+<p>In this histogram, we are seeing that the majority of used car
+listings have prices below $50000. It has a uni-modal distribution with
+right-skew. The mode appears to be at around $17000. Note that I only
+zoomed into the portion where prices below $100,000, since there are so
+few listings beyond that. It was actually quite surprising seeing that
+Japanese cars have such market share at this price range. But still,
+like what we have seen in the previous map plot, American makes are the
+most predominant ones. It also appears that Korean cars are quite rare,
+although also aimed at the cheaper, economical market.</p>
+<p><br></p>
+<p><br></p>
+<p>If we focus on some specific market types (like exotic sport cars),
+maybe we get to see more rarer makes like Italian and British cars.</p>
+<p><img src="mean_price.png" style="width:90.0%" /></p>
+<h3 id="mean-price-of-cars-by-country">Mean Price of Cars by
+Country</h3>
+<p>Here, we focus on listings of cars manufactured by makes from these
+countries. I have put the mean price of make by each country in order so
+that we could see the trend easier. Italian and British cars are very
+rare and they have the highest mean prices. It also appears that German
+cars are aimed at more a more luxury market, somewhat above Swedish and
+American cars. And just like what we have confirmed previously, Japanese
+and Korean cars are the cheapest.</p>
+<p><br></p>
+<p><br></p>
+<p>To better show the market share of different make’s country, I also
+categorized Price into 4 categories: Economy (Price below $20,000),
+Intermediate (Price between $20,000 and $40,000), Premium (Price between
+$40,000 and $100,000), and Super Car (Price above $100,000).</p>
+<p><img src="price_range_proportion.png" style="width:90.0%" /></p>
+<h3 id="proportion-of-country-in-each-price-range">Proportion of Country
+in Each Price Range</h3>
+<p>This is my favorite plot! We are seeing different make and country’s
+market aim much better by looking at the stacked proportions of the
+country of makes in each price range. While we saw almost zero Italian
+cars and little British cars in previous plots (because of their
+rarity), we see that they are very popular for super cars! German cars
+then made up about 40% of the rest of the super cars, with very little
+American and Japanese cars in super cars. The most interesting thing is
+seeing that Japanese and Korean cars decrease in proportion as price
+range gets higher. This just shows their market aim towards the economic
+side. American cars have pretty good market share in most price ranges
+except in super cars – they are solid for sure. Exotic cars, like
+Italian, British, or German made, increases in proportion drastically
+for higher price ranges! And, one last notice: Swedish cars are just
+rare overall. They have little market share in all price ranges.</p>
+<p><br></p>
+<p>To give a quick summary of this data story. We have looked at several
+factors that are involved in the pricing of a used car. Its age and
+mileage are important for sure, but also exotic cars (like Italian or
+German made) usually have much higher price in general. In terms of
+market shares though, these exotic cars make up most of the super cars
+(Price&gt;$100K), but these cars only made up a tiny portion of the
+entire market. Japanese and Korean cars, on the other hand, focuses on
+the cheaper side of the market, and we also see them having quite large
+market shares in those markets they aimed for. Lastly, American cars are
+the most solid cars in the market, being the predominant make in almost
+all states and in almost all market except for super cars. We have also
+looked up whether every state are a lot different in their preferences
+for cars’ make or in price. But we notice that they are actually quite
+similar since they almost all like American cars. And their mean prices
+quite similar in general, with minor noticeable differences.</p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
