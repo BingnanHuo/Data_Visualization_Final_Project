@@ -1,0 +1,8 @@
+"0","ggplot(country_mean, aes(x=Country, y=mean_price)) +
+    geom_bar(stat=""identity"", alpha=0.9, aes(fill=Country)) +
+    ggtitle(""Mean Price of Cars by Country"") +
+    ylab(""Mean Price ($)"")
+ggsave(""mean_price.png"")
+"
+"2","Saving 7.29 x 4.51 in image
+"

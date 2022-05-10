@@ -72,3 +72,13 @@ Now, the color for each state represents the most frequent make in the listings 
 <br>
 
 <br>
+
+Enough of looking at states. I always wondered if it is actually true that European cars are luxury and expensive, while Asian cars are cheap and economic. Let's look at the distributions of prices and the market shares of cars made by different country at different prices.
+
+![](dist_price_country.png){width="90%"}
+
+### Distribution of Prices by Country
+
+In this histogram, we are seeing that the majority of used car listings have prices below \$50000. It has a uni-modal distribution with right-skew. The mode appears to be at around \$17000. It was actually quite surprising seeing
+
+![](mean_price.png)

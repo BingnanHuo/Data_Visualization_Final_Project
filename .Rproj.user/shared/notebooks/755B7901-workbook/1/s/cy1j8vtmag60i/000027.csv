@@ -1,0 +1,12 @@
+"0","ggplot(country_summary, aes(x=PriceRange, y=N, fill=Country)) +
+    geom_bar(position=""fill"", stat=""identity"", alpha=0.95) +
+    scale_fill_brewer(type = ""seq"",
+                      palette = ""Set2"",
+                      direction = 1,
+                      aesthetics = ""fill""
+    ) +
+    ylab(""Proportion"")
+ggsave(""price_range_proportion.png"")
+"
+"2","Saving 7.29 x 4.51 in image
+"

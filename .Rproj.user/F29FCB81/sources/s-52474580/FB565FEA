@@ -3,7 +3,7 @@
     "path": "~/R_Projects/math230_final_project/data_story.Rmd",
     "project_path": "data_story.Rmd",
     "type": "r_markdown",
-    "hash": "494621488",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1651955431751.0,
@@ -12,20 +12,20 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "74,0",
+        "cursorPosition": "81,229",
         "scrollLine": "0",
         "rmdVisualMode": "true",
         "rmdVisualWrapConfigured": "true",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "5423:2921"
+        "rmdVisualModeLocation": "5964:3607"
     },
     "folds": "",
-    "lastKnownWriteTime": 1652184948,
+    "lastKnownWriteTime": 1652185528,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1652184948964,
+    "last_content_update": 1652185528379,
     "read_only": false,
     "read_only_alternatives": []
 }

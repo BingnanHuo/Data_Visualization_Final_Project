@@ -454,13 +454,17 @@ country_mean$Country <- factor(country_mean$Country,
                                levels = country_mean[,Country], ordered = T)
 
 ggplot(country_mean, aes(x=Country, y=mean_price)) +
-    geom_bar(stat="identity", alpha=0.9, aes(fill=Country))
-
+    geom_bar(stat="identity", alpha=0.9, aes(fill=Country)) +
+    ggtitle("Mean Price of Cars by Country") +
+    ylab("Mean Price ($)")
+ggsave("mean_price.png")
 ```
 
 ```{r}
 ggplot(used_cars[Price<=100000], aes(x=Price,fill=Country)) +
-    geom_histogram(bins = 20) 
+    geom_histogram(bins = 20) +
+    ggtitle("Distribution of Prices by Country")
+ggsave("dist_price_country.png")
     
 ggplot(used_cars[Price<=100000], aes(x=Price,y=Country,fill = stat(x))) +
     geom_density_ridges_gradient(scale = 2, rel_min_height = 0.01)+
@@ -481,8 +485,9 @@ ggplot(country_summary, aes(x=PriceRange, y=N, fill=Country)) +
                       palette = "Set2",
                       direction = 1,
                       aesthetics = "fill"
-    )
-
+    ) +
+    ylab("Proportion")
+ggsave("price_range_proportion.png")
     
 ```
 

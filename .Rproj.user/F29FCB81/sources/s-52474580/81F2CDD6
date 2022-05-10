@@ -3,7 +3,7 @@
     "path": "~/R_Projects/math230_final_project/workbook.Rmd",
     "project_path": "workbook.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "2915710317",
     "contents": "",
     "dirty": false,
     "created": 1652029523317.0,
@@ -13,8 +13,8 @@
         "source_window_id": "",
         "Source": "Source",
         "last_setup_crc32": "5247458058571851",
-        "cursorPosition": "457,0",
-        "scrollLine": "432",
+        "cursorPosition": "492,0",
+        "scrollLine": "489",
         "rmdVisualMode": "false",
         "rmdVisualWrapConfigured": "true",
         "docOutlineVisible": "1",
@@ -22,11 +22,11 @@
         "rmdVisualCollapsedChunks": ""
     },
     "folds": "",
-    "lastKnownWriteTime": 1652183673,
+    "lastKnownWriteTime": 1652185297,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1652183673300,
+    "last_content_update": 1652185297297,
     "read_only": false,
     "read_only_alternatives": []
 }
