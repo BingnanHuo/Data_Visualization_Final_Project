@@ -1,3 +1,0 @@
-"0","states_coord <- fread(""us_states_coord.csv"")"
-"0",""
-"0","used_cars[, mean(Price), State]"

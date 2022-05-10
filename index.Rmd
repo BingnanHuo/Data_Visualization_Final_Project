@@ -16,3 +16,8 @@ print("Hello!!")
 
 
 #TODO: checkout plotly (it can serve as a new plot we haven't done and it can add interactive things)
+
+
+
+
+

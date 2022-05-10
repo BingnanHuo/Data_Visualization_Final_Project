@@ -3,7 +3,7 @@
     "path": "~/R_Projects/math230_final_project/_site.yml",
     "project_path": "_site.yml",
     "type": "yaml",
-    "hash": "0",
+    "hash": "246260364",
     "contents": "",
     "dirty": false,
     "created": 1651434380971.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "14,0",
+        "cursorPosition": "16,32",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1650046562,
+    "lastKnownWriteTime": 1652163931,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1650046562,
+    "last_content_update": 1652163931729,
     "read_only": false,
     "read_only_alternatives": []
 }

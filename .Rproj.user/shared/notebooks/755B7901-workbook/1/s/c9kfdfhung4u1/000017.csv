@@ -1,9 +1,0 @@
-"0",""
-"0","ggplot(mean_prices_by_year, aes(x=Year, y=Mean_Price)) +"
-"0","    geom_point() +"
-"0","    geom_smooth() +"
-"0","    ggtitle(""Mean Price by Year"") +"
-"0","    xlab(""Year"") +"
-"0","    ylab(""Price ($)"")"
-"2","`geom_smooth()` using method = 'loess' and formula 'y ~ x'
-"

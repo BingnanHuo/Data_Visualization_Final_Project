@@ -1,5 +1,6 @@
 name: "math230_final_project"
 title: "MATH230 Final Project"
+author: "霍秉楠 Nick Huo"
 description: |
   MATH230 Final Project
 output_dir: "_site"
@@ -11,4 +12,6 @@ navbar:
       href: course_visualizations.html
     - text: "Data Story"
       href: data_story.html
+    - text: "Data Story Workbook"
+      href: workbook.html
 output: distill::distill_article

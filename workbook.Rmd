@@ -2,7 +2,9 @@
 title: "Final Project - Data Story"
 description: |
     Welcome to the website. I hope you enjoy it!
-site: distill::distill_website
+output:
+  distill::distill_article:
+    self_contained: false
 ---
 
 ```{r setup, include=FALSE}
@@ -12,11 +14,16 @@ knitr::opts_chunk$set(echo = TRUE)
 # https://rstudio.github.io/distill/website.html
 ```
 
+# Introduction
+
+asdasdas
+
 # Preparations
 
 Before doing anything with the data and making fun graphs and plots, we need to clean our data.
 
-## Loading Packages
+### Loading Packages
+
 ```{r}
 library(data.table)
 library(ggplot2)
@@ -27,8 +34,10 @@ library(htmlwidgets)
 library(RColorBrewer)
 ```
 
+### Importing Used Cars Dataset
 
-## Importing Used Cars Dataset
+The original dataset has 8 columns, but we won't need Vin, City, and Model because they are too specific. We will drop these three columns to save resources.
+
 ```{r}
 #used_cars <- fread(input = "true_car_listings.csv", drop = c("City", "Vin", "Model"))
 used_cars <- fread(input = "true_car_listings.csv")
@@ -37,14 +46,13 @@ str(used_cars)
 
 ### Data Cleaning
 
-Changing Year to factor and removing Year 2018 because of possibly incomplete data (2018 not done yet) 
+Changing Year to factor and removing Year 2018 because of possibly incomplete data (2018 not done yet)
 
 ```{r}
 used_cars <- used_cars[Year != 2018,]
 used_cars$Year <- factor(used_cars$Year, ordered = T)
 summary(used_cars$Year)
 ```
-
 
 Fix bad state names
 
@@ -83,8 +91,6 @@ str(used_cars)
 
 ```{r}
 states_coord <- fread("us_states_coord.csv")
-
-used_cars[, mean(Price), State]
 ```
 
 ## Categorizing each make by country
@@ -101,43 +107,40 @@ for (i in 1:nrow(make_country)) {
 
 ```
 
-
 ### Putting each state's favorite make on the map
 
 ```{r}
 setkey(states_coord, state_code)
 setkey(used_cars, Make)
 
+# Find each state's favorite make 
 for (state in unique(used_cars$State)) {
     sorted <- used_cars[State==state, .N, by=list(Make)]
     this_fav_make <- sorted[order(-N)]$Make[1]
-    
     states_coord[.(state), fav_make := this_fav_make]
 }
 
-
+# Find each state's favorite car manufacturer country 
 for (state in unique(used_cars$State)) {
     sorted2 <- used_cars[State==state, .N, by=list(Country)]
     this_fav_country <- sorted2[order(-N)]$Country[1]
-    
     states_coord[.(state), fav_country := this_fav_country]
 }
 
+# Find each state's number of listings
 for (state in unique(used_cars$State)) {
     num_car_by_state <- used_cars[,.N, State]
     this_state_n <- num_car_by_state[State==state, N]
-    
     states_coord[.(state), num_listings := this_state_n]
 }
 
+# Find each state's mean listing price
 for (state in unique(used_cars$State)) {
-    mean_price_by_state <- used_cars[,mean(Price), State]
+    mean_price_by_state <- used_cars[,round(mean(Price),2), State]
     this_mean <- mean_price_by_state[State==state, V1]
-    
     states_coord[.(state), mean_price := this_mean]
 }
 ```
-
 
 ```{r}
 states_coord$fav_make <- factor(states_coord$fav_make)
@@ -145,10 +148,10 @@ states_coord$fav_make <- factor(states_coord$fav_make)
 states_coord$fav_make_val <- factor(as.numeric(states_coord$fav_make))
 
 states_coord$hover_text <- with(states_coord, 
-                                paste("State:", state_name, '<br>', 
-                                      "Number of Listings:", num_listings,"<br>",
-                                      "Mean Price:", mean_price, "<br>",
-                                      "Favorite Make:", fav_make))
+                                paste("<b>State:</b>", state_name, '<br>', 
+                                      "<b>Number of Listings:</b>", num_listings,"<br>",
+                                      "<b>Mean Price ($):</b>", mean_price, "<br>",
+                                      "<b>Favorite Make:</b>", fav_make))
 
 # specify some map projection/options
 g <- list(
@@ -196,9 +199,8 @@ layout(title = '2018 US Used Cars -- Favorite Make by State
 
 ggplotly(p)
 
-#saveWidget(p, 'map_fav_make.html')
+saveWidget(p, 'map_fav_make.html')
 ```
-
 
 ```{r}
 # Setting up map for mean price
@@ -223,9 +225,6 @@ ggplotly(fig)
 
 saveWidget(fig, 'map_mean_price.html')
 ```
-
-
-
 
 ```{r}
 set.seed(233)
@@ -257,30 +256,29 @@ summary(sample_df)
 
 I will use mainly the price, year, mileage, state, and make variables.
 
-1. year & mileage on price.
+1.  year & mileage on price.
 
-2. Price distribution by state
+2.  Price distribution by state
 
-3. Mean price by year [scatter or line plot]
+3.  Mean price by year [scatter or line plot]
 
-4. Mean price by state (map) [bubble, price=size of bubble]
+4.  Mean price by state (map) [bubble, price=size of bubble]
 
-5. Distribution (violin or box) of mean prices from each state, by year.
-
+5.  Distribution (violin or box) of mean prices from each state, by year.
 
 Actually have
 
-1. Map showing favorite make in each state
+1.  Map showing favorite make in each state
 
-2. Map showing the average price of each state
+2.  Map showing the average price of each state
 
-3. interactive plot showing the mean price of car manufactured in each year, grouped by states
+3.  interactive plot showing the mean price of car manufactured in each year, grouped by states
 
-4. relationship between mileage, year, and Price. (interactive scatterplot)
+4.  relationship between mileage, year, and Price. (interactive scatterplot)
 
-5. distribution of country for different price range (stacked proportional bar chart)
+5.  distribution of country for different price range (stacked proportional bar chart)
 
-6. 
+6.  
 
 ###Some Testing
 
@@ -319,28 +317,6 @@ ggplotly(p0) %>%
            title = 'Histogram and Density Plot of Prices by State') 
 ```
 
-
-
-
-
-test
-```{r}
-#creating a dummy data table
-DT <- data.table( ID = 1:50,
-                  Capacity = sample(100:1000, size = 50, replace = F),
-                  Code = sample(LETTERS[1:4], 50, replace = T),
-                  State = rep(c("Alabama","Indiana","Texas","Nevada"), 50))
-
-#simple data.table command
-DT[Code == "C", mean(Capacity), State]
-```
-
-
-
-
-
-
-
 ```{r}
 p1 <- ggplot(PA_sample, aes(x=Year, y=Mileage)) +
     #geom_tile(aes(fill = Price)) +
@@ -352,23 +328,8 @@ p1 <- ggplot(PA_sample, aes(x=Year, y=Mileage)) +
 p1
 #ggplotly(p1)
 
-p2 <- ggplot(NY_sample, aes(x=Year, y=Mileage)) +
-    #geom_tile(aes(fill = Price)) +
-    geom_point(aes(size=Price)) +
-    scale_fill_distiller(palette = "YlGnBu", direction = 1) +
-    theme_light() +
-    labs(title = "Price",   y = "Mileage")
-p2
-#ggplotly(p2)
 
-p3 <- ggplot(NJ_sample, aes(x=Year, y=Mileage)) +
-    #geom_tile(aes(fill = Price)) +
-    geom_point(aes(size=Price, fill=State)) +
-    scale_fill_distiller(palette = "YlGnBu", direction = 1) +
-    theme_light() +
-    labs(title = "Price",   y = "Mileage")
-#p3
-#ggplotly(p3)
+
 
 p4 <- ggplot(sample_df, aes(x=Year, y=Mileage)) +
     #geom_tile(aes(fill = Price)) +
@@ -381,29 +342,23 @@ p4
 ggsave("price_by_year_&_mileage.png")
 ```
 
+    fig <- plot_ly(sample_df, x = ~Year, y = ~Mileage, text = ~Make, type = 'scatter', mode = 'markers', color = ~Price, colors='Reds' , marker = list(size = ~Price, opacity = 0.5))
+    fig <- fig %>% layout(title = 'Price by Year and Mileage, grouped by States',
+    xaxis = list(showgrid = FALSE),
+    yaxis = list(showgrid = FALSE))
+    fig
 
-```{}
-fig <- plot_ly(sample_df, x = ~Year, y = ~Mileage, text = ~Make, type = 'scatter', mode = 'markers', color = ~Price, colors='Reds' , marker = list(size = ~Price, opacity = 0.5))
-fig <- fig %>% layout(title = 'Price by Year and Mileage, grouped by States',
-xaxis = list(showgrid = FALSE),
-yaxis = list(showgrid = FALSE))
-fig
-```
+    library(ggplot2)
+    library(ggradar)
+    suppressPackageStartupMessages(library(dplyr))
+    library(scales)
 
-```{}
-library(ggplot2)
-library(ggradar)
-suppressPackageStartupMessages(library(dplyr))
-library(scales)
+    %>%
+    add_rownames( var = "group" ) %>%
+    mutate_each(funs(rescale), -group) %>%
+    tail(4) %>% select(1:10) -> mtcars_radar bv
 
-%>%
-add_rownames( var = "group" ) %>%
-mutate_each(funs(rescale), -group) %>%
-tail(4) %>% select(1:10) -> mtcars_radar bv
-
-ggradar(mtcars_radar) 
-```
-
+    ggradar(mtcars_radar) 
 
 ```{r}
 mean_prices_all_states <- c()
@@ -430,7 +385,6 @@ ggplot(mean_prices_by_year, aes(x=Year, y=Mean_Price)) +
     ylab("Price ($)")
 ggsave("mean_price_by_year.png")
 ```
-
 
 ```{r}
 mean_prices_by_states <- c()
@@ -461,7 +415,6 @@ for (i in 1997:2017) {
 all_data[1183,]
 ```
 
-
 ```{r}
 p10 <- ggplot(mean_prices_by_year_n_state, aes(x=years, y=mean_price, color=states)) +
     geom_point() +
@@ -483,7 +436,6 @@ p11
 ggplotly(p11)
 ```
 
-
 ```{r}
 for (i in levels(used_cars$State)) {
     print(i)
@@ -497,12 +449,9 @@ for (i in levels(used_cars$State)) {
 
 ```
 
-
-
 make by state
 
-south -> american 
-
+south -\> american
 
 ```{r}
 used_cars[,PriceRange := ifelse(Price>=100000, "Super Car", 
@@ -514,8 +463,22 @@ used_cars$PriceRange <- factor(used_cars$PriceRange,
 #used_cars$Country <- factor()
 
 library(ggridges)
+```
 
+```{r}
+country_mean <- used_cars[,mean(Price), by=list(Country)]
+setnames(country_mean, 'V1', 'mean_price')
 
+country_mean <- country_mean[order(-mean_price)]
+country_mean$Country <- factor(country_mean$Country, 
+                               levels = country_mean[,Country], ordered = T)
+
+ggplot(country_mean, aes(x=Country, y=mean_price)) +
+    geom_bar(stat="identity", alpha=0.9, aes(fill=Country))
+
+```
+
+```{r}
 ggplot(used_cars[Price<=100000], aes(x=Price,fill=Country)) +
     geom_histogram(bins = 20) 
     
@@ -543,20 +506,6 @@ ggplot(country_summary, aes(x=PriceRange, y=N, fill=Country)) +
     
 ```
 
-
-```{r}
-country_mean <- used_cars[,mean(Price), by=list(Country)]
-setnames(country_mean, 'V1', 'mean_price')
-
-country_mean <- country_mean[order(-mean_price)]
-country_mean$Country <- factor(country_mean$Country, 
-                               levels = country_mean[,Country], ordered = T)
-
-ggplot(country_mean, aes(x=Country, y=mean_price)) +
-    geom_bar(stat="identity", alpha=0.9, aes(fill=Country))
-```
-
 ```{r}
 used_cars[Country=="Italian"]
 ```
-

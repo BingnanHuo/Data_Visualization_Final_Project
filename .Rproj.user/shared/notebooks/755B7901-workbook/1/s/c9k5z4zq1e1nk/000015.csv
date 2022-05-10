@@ -1,8 +1,0 @@
-"0","#creating a dummy data table"
-"0","DT <- data.table( ID = 1:50,"
-"0","                  Capacity = sample(100:1000, size = 50, replace = F),"
-"0","                  Code = sample(LETTERS[1:4], 50, replace = T),"
-"0","                  State = rep(c(""Alabama"",""Indiana"",""Texas"",""Nevada""), 50))"
-"0",""
-"0","#simple data.table command"
-"0","DT[Code == ""C"", mean(Capacity), State]"

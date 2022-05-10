@@ -1,8 +1,0 @@
-"0","p1 <- ggplot(PA_sample, aes(x=Year, y=Mileage)) +"
-"0","    #geom_tile(aes(fill = Price)) +"
-"0","    geom_point(aes(size=Price)) +"
-"0","    scale_fill_distiller(palette = ""YlGnBu"", direction = 1) +"
-"0","    theme_light() +"
-"0","    labs(title = ""Price"",   y = ""Mileage"")"
-"0",""
-"0","p1"
