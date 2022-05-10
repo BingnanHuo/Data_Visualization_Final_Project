@@ -87,29 +87,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>MATH230 Final Project: MATH230 Final Project Website</title>
+  <title>MATH230 Final Project: Past Course Visualizations</title>
 
-  <meta property="description" itemprop="description" content="by 霍秉楠 Nick Huo"/>
+  <meta property="description" itemprop="description" content="Some additional details about the website"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="MATH230 Final Project: MATH230 Final Project Website"/>
+  <meta property="og:title" content="MATH230 Final Project: Past Course Visualizations"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="by 霍秉楠 Nick Huo"/>
+  <meta property="og:description" content="Some additional details about the website"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="MATH230 Final Project"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="MATH230 Final Project: MATH230 Final Project Website"/>
-  <meta property="twitter:description" content="by 霍秉楠 Nick Huo"/>
+  <meta property="twitter:title" content="MATH230 Final Project: Past Course Visualizations"/>
+  <meta property="twitter:description" content="Some additional details about the website"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["MATH230 Final Project Website"]},{"type":"character","attributes":{},"value":["by 霍秉楠 Nick Huo"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["Past Course Visualizations"]},{"type":"character","attributes":{},"value":["Some additional details about the website\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2057,7 +2057,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"MATH230 Final Project Website","description":"by 霍秉楠 Nick Huo","authors":[]}
+{"title":"Past Course Visualizations","description":"Some additional details about the website","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2081,21 +2081,59 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>MATH230 Final Project Website</h1>
+<h1>Past Course Visualizations</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>by 霍秉楠 Nick Huo</p></p>
+<p><p>Some additional details about the website</p></p>
 </div>
 
 
 <div class="d-article">
-<p>Hi! Welcome to my website for MATH230 Final Project.</p>
-<div class="layout-chunk" data-layout="l-body">
-<pre><code>[1] &quot;Hello!!&quot;</code></pre>
-</div>
-<p>#TODO: checkout plotly (it can serve as a new plot we haven’t done
-and it can add interactive things)</p>
-<div class="sourceCode" id="cb2"><pre
+<h2 id="generative-art">Generative Art</h2>
+<p>The pictures below are artworks generated using the
+<code>aRtsy</code> <a
+href="https://github.com/koenderks/aRtsy">package</a>, which uses some
+algorithms with certain parameter and randomization settings to generate
+beautiful pieces autonomously.</p>
+<figure>
+<img src="Art1.png" style="width:80.0%"
+alt="Generative Art - Space Camo" />
+<figcaption aria-hidden="true">Generative Art - Space Camo</figcaption>
+</figure>
+<p><em>Space Camo, 2022</em></p>
+<figure>
+<img src="Art2.png" style="width:80.0%"
+alt="Generative Art - Titan Waves" />
+<figcaption aria-hidden="true">Generative Art - Titan Waves</figcaption>
+</figure>
+<p><em>Titan Wave, 2022</em></p>
+<figure>
+<img src="Art3.png" style="width:80.0%"
+alt="Generative Art - Outer Land" />
+<figcaption aria-hidden="true">Generative Art - Outer Land</figcaption>
+</figure>
+<p><em>Outer Land, 2022</em></p>
+<h2
+id="confidence-interval-plots-interactive-shiny-visualizations">Confidence
+Interval Plots &amp; Interactive Shiny Visualizations</h2>
+<p>Here is a plot showing the effects of the confidence level on width
+of confidence intervals. We have randomly selected 6 from 10000 randomly
+simulated samples, and we will see that adjusting the confidence level
+higher will result in wider intervals, vice versa. In the top interval,
+with its sample mean, we can see that when confidence level is 80%, the
+reduced interval width caused it to almost miss the true population
+mean.</p>
+<p>So, with the same sample means, changing the confidence level will
+result in different interval widths; consequently, lower confidence
+levels means less intervals in repeated sampling will successfully
+capture the true population mean – the sample means remain the same, but
+different confidence level results in different widths that may or may
+not capture the true population mean.</p>
+<p><u>Link to Interactive APP:</u></p>
+<p><a
+href="https://rconnect.bucknell.edu/content/c9c7fa3a-0fbf-4c42-b4e7-19e6950f0564"
+class="uri">https://rconnect.bucknell.edu/content/c9c7fa3a-0fbf-4c42-b4e7-19e6950f0564</a></p>
+<div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

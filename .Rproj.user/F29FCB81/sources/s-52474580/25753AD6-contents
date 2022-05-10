@@ -3,7 +3,7 @@ title: "MATH230 Final Project"
 author: "霍秉楠 Nick Huo"
 description: |
   MATH230 Final Project
-output_dir: "_site"
+output_dir: "."
 navbar:
   right:
     - text: "Homepage"

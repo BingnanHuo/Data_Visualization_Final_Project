@@ -3,7 +3,7 @@
     "path": "~/R_Projects/math230_final_project/data_story.Rmd",
     "project_path": "data_story.Rmd",
     "type": "r_markdown",
-    "hash": "543131553",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1651955431751.0,
@@ -18,7 +18,7 @@
         "rmdVisualWrapConfigured": "true",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "372:0"
+        "rmdVisualModeLocation": "290:0"
     },
     "folds": "",
     "lastKnownWriteTime": 1652165762,
