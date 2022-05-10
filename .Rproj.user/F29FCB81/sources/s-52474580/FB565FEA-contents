@@ -51,6 +51,24 @@ While we are still at comparing the mean price of used cars for each state, mayb
 
 </iframe>
 
+### 2018 US Used Cars -- Mean Listing Price by State
+
+Here in this interactive map plot, you can hover on each state to see more detailed information on that state's used car listings. Colors indicate mean prices. But just on the first glance, there doesn't appear to be some geographical factor involved by a lot. States in the Midwest has slightly higher prices, but not by a large amount, compared to States on the East. The difference in color (signifying mean listing price) are also small.
+
+<br>
+
+<br>
+
+Now what if we want to see the preference in make for each state? I have also heard of rumors that people in the South prefer American cars more, is that true?
+
 <iframe src="map_fav_make.html" width="380" height="400">
 
 </iframe>
+
+### 2018 US Used Cars -- Favorite Make by State
+
+Now, the color for each state represents the most frequent make in the listings of that state. We can see that, contrary to the rumor, the majority of US states in fact love American cars like Ford and Chevrolet. While Japanese makes are only the most popular in a few states. And there is only one state (actually not a state) -- Washington DC that has BMW as its favorite make. You have to zoom in a lot on the map to see the DC region and its brown color.
+
+<br>
+
+<br>
