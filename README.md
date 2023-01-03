@@ -1,4 +1,4 @@
-# MATH230 Final Project
+# Data Visualization (MATH230) Final Project Website
 
 This is a website for my final project for Data Visualization (MATH230), built with R distill package. It features several data visualizations done in the course and a _data story_ based on a dataset ([Source](https://www.kaggle.com/datasets/harikrishnareddyb/used-car-price-predictions)) on used car listings
 
